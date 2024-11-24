@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politique de Confidentialité | Privacy Policy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: #6c63ff;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        h1, h2 {
+            color: #6c63ff;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #6c63ff;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="title">Privacy Policy</h1>
+    </header>
+    <div class="container">
+        <div id="content">
+            <!-- Content will load here based on the browser's language -->
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 Photo Date Fixer | All Rights Reserved
+    </footer>
+
+    <script>
+        const privacyContent = {
+            "fr": `
+                <h2>Politique de Confidentialité</h2>
+                <p>Cette politique de confidentialité s’applique à l’application <strong>Photo Date Fixer</strong> (ci-après dénommée "Application") développée par DURIEUX.</p>
+                <p><strong>Collecte de données :</strong> L'Application ne collecte aucune donnée personnelle ou technique. Toutes les fonctionnalités s'exécutent localement sur votre appareil.</p>
+                <p><strong>Responsabilité :</strong> Le Fournisseur n'est pas responsable des problèmes causés par l'utilisation de l'Application (ex. perte de données, incompatibilités).</p>
+                <p><strong>Mises à jour :</strong> L’Application peut être mise à jour à tout moment. Les utilisateurs doivent accepter les mises à jour pour continuer à l'utiliser.</p>
+                <p>Pour toute question, contactez-nous à : <a href="mailto:dd77400@free.fr">dd77400@free.fr</a>.</p>
+            `,
+            "en": `
+                <h2>Privacy Policy</h2>
+                <p>This privacy policy applies to the <strong>Photo Date Fixer</strong> application (hereinafter referred to as "Application") developed by [Service Provider].</p>
+                <p><strong>Data Collection:</strong> The Application does not collect any personal or technical data. All functionalities are performed locally on your device.</p>
+                <p><strong>Liability:</strong> The Service Provider is not responsible for issues caused by using the Application (e.g., data loss, incompatibilities).</p>
+                <p><strong>Updates:</strong> The Application may be updated at any time. Users must accept updates to continue using the Application.</p>
+                <p>For questions, contact us at: <a href="mailto:dd77400@free.fr">dd77400@free.fr</a>.</p>
+            `
+        };
+
+        // Detect browser language
+        const userLang = navigator.language || navigator.userLanguage;
+        const contentDiv = document.getElementById("content");
+        const title = document.getElementById("title");
+
+        if (userLang.startsWith("fr")) {
+            contentDiv.innerHTML = privacyContent["fr"];
+            title.textContent = "Politique de Confidentialité";
+        } else {
+            contentDiv.innerHTML = privacyContent["en"];
+        }
+    </script>
+</body>
+</html>
